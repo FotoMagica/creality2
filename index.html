@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un Recuerdo</title>
+
+<style>
+  body {
+    margin: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+
+  video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .mensaje {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
+  }
+
+  .sonido {
+    position: absolute;
+    top: 30px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop playsinline id="video">
+  <source src="video2.mp4" type="video/mp4">
+</video>
+
+<div class="mensaje">
+
+</div>
+
+<div class="sonido">
+  Toca la pantalla para activar sonido
+</div>
+
+<script>
+  const video = document.getElementById("video");
+  document.body.addEventListener("click", function() {
+    video.muted = false;
+    video.play();
+  });
+</script>
+
+<script data-goatcounter="https://fotomagica.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
